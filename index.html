@@ -354,6 +354,99 @@
 <script async src="https://cdn.credly.com/assets/utilities/embed.js"></script>
 
 </section>
+		<section class="section bg-custom-gray" id="gsp-project">
+  <div class="container">
+    <h2 class="mb-4"><span class="text-danger">GSP</span> Project — Multi-Cloud Comparison</h2>
+
+    <div class="card p-3 mb-3">
+      <div class="d-flex flex-wrap align-items-center" style="gap:16px;">
+        <img src="assets/imgs/project-gsp.jpg" alt="GSP project"
+             style="width:220px;border-radius:12px;object-fit:cover;">
+
+        <div style="flex:1;min-width:240px;">
+          <h4 class="mb-1">GCP vs Azure vs AWS (Service Mapping + Analysis)</h4>
+          <p class="text-muted mb-2">
+            Multi-cloud comparison report: equivalent services + conceptual differences + pros/cons,
+            plus a practical sandbox VM setup.
+          </p>
+
+          <div class="d-flex flex-wrap" style="gap:10px;">
+            <a class="btn btn-outline-light btn-sm"
+               href="assets/files/GSP_project.pdf" target="_blank" rel="noopener">
+              View PDF
+            </a>
+
+            <a class="btn btn-outline-danger btn-sm"
+               href="assets/files/GSP_project.pdf" download>
+              Download
+            </a>
+
+            <!-- Uses your no-pop-up print system (data-print-pdf) -->
+            <button type="button" class="btn btn-danger btn-sm"
+                    data-print-pdf="assets/files/GSP_project.pdf">
+              Print
+            </button>
+
+            <button class="btn btn-secondary btn-sm" type="button"
+                    data-toggle="collapse" data-target="#gspDetails"
+                    aria-expanded="false" aria-controls="gspDetails">
+              Details
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="collapse mt-3" id="gspDetails">
+        <hr>
+
+        <h5 class="mb-2">1) Service Mapping (core equivalents)</h5>
+        <div class="table-responsive">
+          <table class="table table-sm table-bordered mb-4">
+            <thead class="thead-light">
+              <tr>
+                <th>Category</th>
+                <th>GCP</th>
+                <th>Azure</th>
+                <th>AWS</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Global structure</td><td>Org → Folder → Project</td><td>Tenant → Sub → RG</td><td>Org → Account</td></tr>
+              <tr><td>Identity & Access</td><td>IAM</td><td>Entra ID + RBAC</td><td>IAM</td></tr>
+              <tr><td>Compute (VMs)</td><td>Compute Engine</td><td>Virtual Machines</td><td>EC2</td></tr>
+              <tr><td>Object Storage</td><td>Cloud Storage</td><td>Blob Storage</td><td>S3</td></tr>
+              <tr><td>Virtual Network</td><td>VPC</td><td>VNet</td><td>VPC</td></tr>
+              <tr><td>Firewall / Security</td><td>Firewall Rules</td><td>NSG</td><td>Security Groups</td></tr>
+              <tr><td>Monitoring</td><td>Cloud Monitoring</td><td>Azure Monitor</td><td>CloudWatch</td></tr>
+              <tr><td>CLI Tool</td><td>gcloud</td><td>az</td><td>aws</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h5 class="mb-2">2) Key Findings (what I learned)</h5>
+        <ul class="mb-4">
+          <li><strong>IAM:</strong> GCP is centered on hierarchy (Org → Folder → Project) with role inheritance; Azure uses Entra ID + RBAC; AWS is policy-focused. :contentReference[oaicite:11]{index=11}</li>
+          <li><strong>Terminology:</strong> GCP “service accounts” align conceptually with roles/managed identities; “projects” act as a major boundary similar to accounts/subscriptions. :contentReference[oaicite:12]{index=12}</li>
+          <li><strong>Networking:</strong> GCP VPC is global (subnets are regional); AWS/Azure networking is regional; firewall rules differ from security groups/NSGs in how they apply. :contentReference[oaicite:13]{index=13}</li>
+          <li><strong>Compute:</strong> “Machine type” equals AWS instance type / Azure VM size; managed instance groups map to auto scaling groups / VM scale sets. :contentReference[oaicite:14]{index=14}</li>
+        </ul>
+
+        <h5 class="mb-2">3) Practical Part</h5>
+        <p class="mb-0">
+          Practical sandbox section includes creating a VM instance and a “Hello World” activity.
+        </p>
+        <small class="text-muted">
+          (This is shown as the “Practical (Pluralsight Sandbox) Migration to GCP + Implementation” part of the report.)
+        </small>
+      </div>
+    </div>
+
+    <small class="text-muted">
+      Note: This PDF can also be referenced as your required “technical documentation (report)” for the school portfolio.
+    </small>
+  </div>
+</section>
+
 
     </section>
     
